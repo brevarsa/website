@@ -6,21 +6,24 @@
   <title>BREVARSA</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --card: #020617;
-      --accent: #38bdf8;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
+      --accent: #2BAE9C;
+      --bg-dark: #0d1514;
+      --bg-light: #0f1b1a;
+      --card: #0e1716;
+      --text: #e7f6f3;
+      --muted: #a3c7c0;
     }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #1f2937, #020617);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "SF Pro Text", "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, var(--bg-light), var(--bg-dark));
       color: var(--text);
       min-height: 100vh;
       display: flex;
@@ -28,46 +31,53 @@
       justify-content: center;
       padding: 2rem;
     }
+
     .card {
       max-width: 640px;
       width: 100%;
-      background: linear-gradient(145deg, #020617, #020617);
+      background: var(--card);
       border-radius: 1.5rem;
       padding: 2.5rem 2.25rem;
       box-shadow:
-        0 20px 40px rgba(15, 23, 42, 0.8),
-        0 0 0 1px rgba(148, 163, 184, 0.15);
-      border: 1px solid rgba(148, 163, 184, 0.3);
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(43, 174, 156, 0.25);
+      border: 1px solid rgba(43, 174, 156, 0.35);
     }
+
     .pill {
       display: inline-flex;
       align-items: center;
       border-radius: 999px;
       padding: 0.15rem 0.75rem;
-      background: rgba(148, 163, 184, 0.16);
-      color: var(--muted);
+      background: rgba(43, 174, 156, 0.18);
+      color: var(--accent);
       font-size: 0.75rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       margin-bottom: 1.25rem;
     }
+
     h1 {
       font-size: clamp(1.9rem, 3vw, 2.4rem);
       margin-bottom: 0.75rem;
       letter-spacing: 0.01em;
+      color: var(--text);
     }
+
     p.lead {
       font-size: 0.98rem;
       color: var(--muted);
       line-height: 1.6;
       margin-bottom: 1.75rem;
     }
+
     .meta {
       display: grid;
       grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
       gap: 1.5rem;
       font-size: 0.9rem;
     }
+
     .meta-label {
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -75,17 +85,21 @@
       color: var(--muted);
       margin-bottom: 0.25rem;
     }
+
     .meta-value {
       color: var(--text);
       word-break: break-word;
     }
+
     a {
       color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     @media (max-width: 640px) {
       .card {
         padding: 2rem 1.5rem;
@@ -100,6 +114,7 @@
   <main class="card" aria-label="Company information">
     <div class="pill">Software & Digital Services</div>
     <h1>BREVARSA</h1>
+
     <p class="lead">
       BREVARSA is a privately held company focused on designing and developing
       secure, user-focused software experiences, including mobile applications
@@ -114,6 +129,7 @@
           <a href="mailto:admin@brevarsa.com">admin@brevarsa.com</a>
         </div>
       </div>
+
       <div>
         <div class="meta-label">Status</div>
         <div class="meta-value">
